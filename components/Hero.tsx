@@ -25,13 +25,14 @@ export default function Hero() {
               Hi, I am
             </p>
             <h1 className="text-5xl lg:text-7xl font-extrabold text-black tracking-tight mb-3">
-              Maruf Billah
+              MARUF BILLAH
             </h1>
             <p className="text-gray-600 font-medium text-base lg:text-lg mb-8">
               Aspiring Full-Stack Web Developer
             </p>
 
             {/* Social Icons */}
+
             <div className="flex items-center gap-4">
               <a
                 href="#contact"
@@ -107,8 +108,8 @@ export default function Hero() {
         <div className="relative z-10 w-full mt-auto bg-[#1A1A1A]/90 backdrop-blur-md p-6 pt-8 pb-8 flex justify-between items-end [clip-path:polygon(0_15%,100%_0,100%_100%,0%_100%)] border-t border-white/10">
           <div className="flex flex-col text-white gap-1 pr-2">
             <p className="text-xs text-gray-400 tracking-wider uppercase font-medium">Hi, I am</p>
-            <h1 className="text-3xl font-extrabold tracking-tight text-white">Maruf Billah</h1>
-            <p className="text-xs text-gray-400 font-normal">Front-end Developer / UI Designer</p>
+            <h1 className="text-3xl font-extrabold tracking-tight text-white">MARUF BILLAH</h1>
+            <p className="text-xs text-gray-400 font-normal">Aspiring Full-Stack Web Developer</p>
           </div>
 
           <div className="flex flex-col gap-2.5">
