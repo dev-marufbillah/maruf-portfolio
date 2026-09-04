@@ -41,7 +41,7 @@ export default function Hero() {
                 @
               </a>
               <a
-                href="#"
+                href="https://github.com/dev-marufbillah"
                 aria-label="GitHub"
                 className="w-12 h-12 rounded-sm bg-[#C4C4C4] hover:bg-gray-300 flex items-center justify-center text-black shadow-[inset_-2px_-2px_4px_rgba(255,255,255,0.8),inset_2px_2px_4px_rgba(0,0,0,0.2)] transition"
               >
@@ -50,7 +50,7 @@ export default function Hero() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/dev-marufbillah/"
                 aria-label="LinkedIn"
                 className="w-12 h-12 rounded-sm bg-[#C4C4C4] hover:bg-gray-300 flex items-center justify-center text-black shadow-[inset_-2px_-2px_4px_rgba(255,255,255,0.8),inset_2px_2px_4px_rgba(0,0,0,0.2)] transition"
               >
