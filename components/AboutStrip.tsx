@@ -10,11 +10,13 @@ export default function AboutStrip() {
       </span>
 
       <div className="relative max-w-xl">
-        <h2 className="mb-4 text-2xl font-bold">Company or brand name</h2>
+        <h2 className="mb-4 text-2xl font-bold">Programming Hero</h2>
         <p className="mb-6 text-sm leading-relaxed text-gray-400">
-          Write a short paragraph here about the company, agency, or yourself —
-          what you do, who you work with, and what makes your work stand out.
-          Keep it to two or three sentences so it stays easy to scan.
+           I’m currently a Web Development student at Programming Hero, 
+           where I’m learning modern web technologies and building practical projects.
+           My goal is to become a professional Web Developer by developing strong 
+           skills in frontend development, problem-solving, 
+           and creating user-friendly websites.
         </p>
         <a
           href="#about"
