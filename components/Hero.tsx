@@ -43,6 +43,8 @@ export default function Hero() {
               <a
                 href="https://github.com/dev-marufbillah"
                 aria-label="GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-12 h-12 rounded-sm bg-[#C4C4C4] hover:bg-gray-300 flex items-center justify-center text-black shadow-[inset_-2px_-2px_4px_rgba(255,255,255,0.8),inset_2px_2px_4px_rgba(0,0,0,0.2)] transition"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -52,6 +54,8 @@ export default function Hero() {
               <a
                 href="https://www.linkedin.com/in/dev-marufbillah/"
                 aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-12 h-12 rounded-sm bg-[#C4C4C4] hover:bg-gray-300 flex items-center justify-center text-black shadow-[inset_-2px_-2px_4px_rgba(255,255,255,0.8),inset_2px_2px_4px_rgba(0,0,0,0.2)] transition"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
