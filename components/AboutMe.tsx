@@ -1,18 +1,18 @@
 const services = [
   {
-    title: "Design",
+    title: "LEARNING",
     description:
-      "I can design the site based on your needs and suggestions. I can also design the interface from scratch and consult you along the way.",
+      "I’m continuously learning modern web development through Programming Hero and strengthening my knowledge through practical exercises, coding challenges, and real-world projects. I believe consistent learning and practice are the keys to becoming a better developer.",
   },
   {
     title: "Development",
     description:
-      "I can design the site based on your needs and suggestions. I can also design the interface from scratch and consult you along the way.",
+      "I enjoy developing responsive and user-friendly websites using modern web technologies such as HTML, CSS, JavaScript, React, and TypeScript. I focus on writing clean, organized code and creating interfaces that work smoothly across different devices.",
   },
   {
-    title: "Maintenance",
+    title: "PROJECTS",
     description:
-      "I can design the site based on your needs and suggestions. I can also design the interface from scratch and consult you along the way.",
+      "I love turning what I learn into practical projects that help me improve my problem-solving and development skills. Each project gives me an opportunity to experiment with new ideas, learn from challenges, and build a stronger portfolio as I work toward becoming a professional Web Developer.",
   },
 ];
 
@@ -26,10 +26,15 @@ export default function AboutMe() {
 
       {/* Intro paragraph */}
       <p className="mx-auto mb-10 max-w-xl text-sm leading-relaxed text-gray-500">
-        Write a short introduction about yourself here — your background,
-        what you specialize in, and the kind of projects you enjoy working on.
-        Keep it to two or three sentences.
+        I’m a passionate and dedicated Web Development student currently learning and growing my skills 
+        through Programming Hero. I’m focused on building modern, responsive, 
+        and user-friendly websites while developing a strong understanding of HTML, CSS, JavaScript, React, and TypeScript. 
+        I enjoy turning ideas into real-world projects, solving problems through code, 
+        and continuously improving my development and design skills. 
+        My goal is to become a professional Web Developer and create clean, functional, 
+        and meaningful digital experiences that provide real value to users and businesses.
       </p>
+
 
       {/* Explore link */}
       <a
