@@ -25,7 +25,7 @@ export default function Hero() {
               Hi, I am
             </p>
             <h1 className="text-5xl lg:text-7xl font-extrabold text-black tracking-tight mb-3">
-              MARUF BILLAH
+              Maruf Billah
             </h1>
             <p className="text-gray-600 font-medium text-base lg:text-lg mb-8">
               Aspiring Full-Stack Web Developer
