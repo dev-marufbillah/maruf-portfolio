@@ -28,7 +28,7 @@ export default function Hero() {
               Maruf Billah
             </h1>
             <p className="text-gray-600 font-medium text-base lg:text-lg mb-8">
-              Front-end Developer / UI Designer
+              Aspiring Full-Stack Web Developer
             </p>
 
             {/* Social Icons */}
