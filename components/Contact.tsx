@@ -3,13 +3,34 @@
 import { useState, FormEvent } from "react";
 
 export default function Contact() {
-  const [status, setStatus] = useState<"idle" | "sent">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
+    "idle"
+  );
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // Form is not wired to a backend yet. Once you add one (an API route,
-    // or a service like Formspree/Resend), send the form data from here.
-    setStatus("sent");
+    setStatus("sending");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    formData.append("access_key", "414892c5-6beb-412d-8f3f-0b99982f8686");
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const result = await res.json();
+
+      if (result.success) {
+        setStatus("sent");
+        form.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -59,15 +80,20 @@ export default function Contact() {
 
         <button
           type="submit"
-          className="mx-auto mt-4 border-x border-black px-6 py-2 text-xs font-medium tracking-widest"
+          disabled={status === "sending"}
+          className="mx-auto mt-4 border-x border-black px-6 py-2 text-xs font-medium tracking-widest disabled:opacity-50"
         >
-          SUBMIT
+          {status === "sending" ? "SENDING..." : "SUBMIT"}
         </button>
 
         {status === "sent" && (
           <p className="text-center text-sm text-green-700">
-            Thanks — your message has been noted. (Connect a backend to
-            actually deliver it.)
+            Thanks — your message has been sent successfully!
+          </p>
+        )}
+        {status === "error" && (
+          <p className="text-center text-sm text-red-600">
+            Something went wrong. Please try again in a moment.
           </p>
         )}
       </form>
