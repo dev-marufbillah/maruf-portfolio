@@ -5,13 +5,66 @@ import Image from "next/image";
 
 type Category = "all" | "codes" | "designed";
 
-const projects: { title: string; category: Category; image: string }[] = [
-  { title: "Project one", category: "codes", image: "https://picsum.photos/seed/proj1/500/400" },
-  { title: "Project two", category: "designed", image: "https://picsum.photos/seed/proj2/500/400" },
-  { title: "Project three", category: "codes", image: "https://picsum.photos/seed/proj3/500/400" },
-  { title: "Project four", category: "designed", image: "https://picsum.photos/seed/proj4/500/400" },
-  { title: "Project five", category: "codes", image: "https://picsum.photos/seed/proj5/500/400" },
-  { title: "Project six", category: "designed", image: "https://picsum.photos/seed/proj6/500/400" },
+type Project = {
+  title: string;
+  description: string;
+  category: Category;
+  image: string;
+  tech: string[];
+  demoUrl?: string;
+  githubUrl?: string;
+};
+
+const projects: Project[] = [
+  {
+    title: "Project One",
+    description: "A short one-line description of what this project does.",
+    category: "codes",
+    image: "https://picsum.photos/seed/proj1/500/400",
+    tech: ["Next.js", "Tailwind CSS", "MongoDB"],
+    demoUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    title: "Project Two",
+    description: "A short one-line description of what this project does.",
+    category: "designed",
+    image: "https://picsum.photos/seed/proj2/500/400",
+    tech: ["Figma", "UI/UX"],
+    demoUrl: "#",
+  },
+  {
+    title: "Project Three",
+    description: "A short one-line description of what this project does.",
+    category: "codes",
+    image: "https://picsum.photos/seed/proj3/500/400",
+    tech: ["React", "Node.js", "Express"],
+    demoUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    title: "Project Four",
+    description: "A short one-line description of what this project does.",
+    category: "designed",
+    image: "https://picsum.photos/seed/proj4/500/400",
+    tech: ["Figma", "Branding"],
+  },
+  {
+    title: "Project Five",
+    description: "A short one-line description of what this project does.",
+    category: "codes",
+    image: "https://picsum.photos/seed/proj5/500/400",
+    tech: ["TypeScript", "Next.js", "PostgreSQL"],
+    demoUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    title: "Project Six",
+    description: "A short one-line description of what this project does.",
+    category: "designed",
+    image: "https://picsum.photos/seed/proj6/500/400",
+    tech: ["Figma", "Prototyping"],
+  },
 ];
 
 const filters: { label: string; value: Category }[] = [
@@ -61,20 +114,66 @@ export default function Portfolio() {
       </div>
 
       {/* Project grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-3">
+      <div className="grid grid-cols-1 gap-px bg-white/10 sm:grid-cols-2 lg:grid-cols-3">
         {visible.map((project) => (
           <div
             key={project.title}
-            className="group relative aspect-[4/3] overflow-hidden"
+            className="group flex flex-col bg-neutral-900 pb-6"
           >
-            <Image
-              src={project.image}
-              alt={project.title}
-              fill
-              className="object-cover transition duration-300 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 flex items-end bg-black/0 p-4 opacity-0 transition group-hover:bg-black/50 group-hover:opacity-100">
-              <span className="text-sm text-white">{project.title}</span>
+            {/* Image */}
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                className="object-cover transition duration-300 group-hover:scale-105"
+              />
+            </div>
+
+            {/* Content */}
+            <div className="flex flex-1 flex-col px-5 pt-4 text-left">
+              <h3 className="mb-1 text-base font-semibold text-white">
+                {project.title}
+              </h3>
+              <p className="mb-3 text-sm text-gray-400">
+                {project.description}
+              </p>
+
+              {/* Tech tags */}
+              <div className="mb-4 flex flex-wrap gap-2">
+                {project.tech.map((t) => (
+                  <span
+                    key={t}
+                    className="rounded-full border border-white/20 px-3 py-1 text-[11px] text-gray-300"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+
+              {/* Links */}
+              <div className="mt-auto flex gap-4 text-xs font-medium tracking-wide">
+                {project.demoUrl && (
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white underline-offset-4 hover:underline"
+                  >
+                    Live Demo →
+                  </a>
+                )}
+                {project.githubUrl && (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 underline-offset-4 hover:text-white hover:underline"
+                  >
+                    GitHub →
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         ))}
