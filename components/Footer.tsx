@@ -1,12 +1,28 @@
 "use client";
 
-import { FaFacebookF, FaLinkedinIn, FaInstagram, FaEnvelope } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaGithub, FaEnvelope } from "react-icons/fa";
 
 const socials = [
-  { label: "Facebook", href: "#", Icon: FaFacebookF },
-  { label: "LinkedIn", href: "#", Icon: FaLinkedinIn },
-  { label: "Instagram", href: "#", Icon: FaInstagram },
-  { label: "Email", href: "mailto:you@example.com", Icon: FaEnvelope },
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/dev.marubillah",
+    Icon: FaFacebookF,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/dev-marufbillah/",
+    Icon: FaLinkedinIn,
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/dev-marufbillah",
+    Icon: FaGithub,
+  },
+  {
+    label: "Email",
+    href: "mailto:marufsalauddinofficial@gmail.com",
+    Icon: FaEnvelope,
+  },
 ];
 
 export default function Footer() {
@@ -27,6 +43,8 @@ export default function Footer() {
           <a
             key={s.label}
             href={s.href}
+            target={s.label !== "Email" ? "_blank" : undefined}
+            rel={s.label !== "Email" ? "noopener noreferrer" : undefined}
             aria-label={s.label}
             className="flex h-9 w-9 items-center justify-center rounded-md border border-white/30 text-sm transition hover:bg-white hover:text-black"
           >
@@ -36,7 +54,7 @@ export default function Footer() {
       </div>
 
       <p className="text-xs text-gray-400">
-        &copy;{year} Your Name. All rights reserved.
+        &copy;{year} Maruf Billah. All rights reserved.
       </p>
     </footer>
   );
