@@ -14,9 +14,13 @@ export default function Hero() {
           
           {/* Logo */}
           <div className="flex items-center">
-            <span className="text-2xl font-black tracking-tighter text-black border-2 border-black px-2.5 py-0.5">
-              MB
-            </span>
+            <Image
+              src="/images/logo.png"
+              alt="Maruf Billah logo"
+              width={56}
+              height={56}
+              className="object-contain"
+            />
           </div>
 
           {/* Text Content */}
@@ -97,9 +101,13 @@ export default function Hero() {
         
         {/* Mobile Header Logo */}
         <div className="flex justify-between items-center p-6 z-20">
-          <span className="text-white font-black text-lg tracking-tighter border-2 border-white px-2 py-0.5">
-            MB
-          </span>
+          <Image
+            src="/images/logo-white.png"
+            alt="Maruf Billah logo"
+            width={40}
+            height={40}
+            className="object-contain"
+          />
         </div>
 
         {/* Mobile Full Image */}
